@@ -10,7 +10,7 @@ DEBUG = True
 
 MAGIC_MESSAGE = os.environ.get("MAGIC_MESSAGE")
 
-ALLOWED_HOSTS = ['django', 'localhost']
+ALLOWED_HOSTS = ['django', 'localhost', '127.0.0.1']
 INSTALLED_APPS = [
     'simplest_django'
 ]

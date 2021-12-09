@@ -13,7 +13,7 @@ MAGIC_MESSAGE = os.environ.get("MAGIC_MESSAGE")
 ALLOWED_HOSTS = ["django", "localhost", "127.0.0.1"]
 INSTALLED_APPS = []
 
-ROOT_URLCONF = "simplest_django.urls"
+ROOT_URLCONF = "src.django_core.urls"
 
 TEMPLATES = [
     {
@@ -27,4 +27,4 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "simplest_django.wsgi.application"
+WSGI_APPLICATION = "src.django_core.wsgi.application"

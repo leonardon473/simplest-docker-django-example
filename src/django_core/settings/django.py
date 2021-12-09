@@ -10,23 +10,21 @@ DEBUG = True
 
 MAGIC_MESSAGE = os.environ.get("MAGIC_MESSAGE")
 
-ALLOWED_HOSTS = ['django', 'localhost', '127.0.0.1']
-INSTALLED_APPS = [
-    'simplest_django'
-]
+ALLOWED_HOSTS = ["django", "localhost", "127.0.0.1"]
+INSTALLED_APPS = []
 
-ROOT_URLCONF = 'simplest_django.urls'
+ROOT_URLCONF = "simplest_django.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'simplest_django.wsgi.application'
+WSGI_APPLICATION = "simplest_django.wsgi.application"

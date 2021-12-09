@@ -11,7 +11,7 @@ services:
     env_file:
       - .env
     volumes:
-      - .:/usr/src/app
+      - .:/app
 
   postgres:
     image: circleci/postgres:12.3-postgis

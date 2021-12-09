@@ -15,7 +15,3 @@ down: ## stop and remove Docker containers
 rebuild: ## rebuild base Docker images
 	@docker-compose down --remove-orphans
 	@docker-compose build --no-cache
-
-reset: ## update Docker images and reset local databases
-	@docker-compose down --volumes --remove-orphans
-	@docker-compose pull

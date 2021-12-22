@@ -4,14 +4,13 @@ This project is based on [The Simplest Docker + Django Example](https://github.c
 ## Commands
 
 ### Run the project:
-- `make up` This will be build, run the docker container and open a bash from the
-  container.
+- `cp dev.env .env` This command create test.env file.
 
-  Ctrl-D to stop
+- `make up` This will be build, run the docker container and open a bash from the
+  container. Use Ctrl-D to stop.
 
 - `./dev up` One time you are in the container this command will run the django project.
-
-  Ctrl-C to stop
+  Ctrl-C to stop.
 
 - `./dev test` Run all the project tests.
 

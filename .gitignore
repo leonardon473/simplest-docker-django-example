@@ -215,3 +215,8 @@ fabric.properties
 .ionide
 
 # End VisualStudioCode
+
+gitignore/
+
+# Bash
+.bash_history

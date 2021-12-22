@@ -30,39 +30,19 @@ shift || _usage
 
 case ${arg} in
 up|run|server|runserver)
-  python manage.py runserver 0.0.0.0:8000
+  python src/manage.py runserver 0.0.0.0:8000
 ;;
 test)
-  pytest "$@" --flake8 --isort --black --junitxml=/dev/shm/test-results/pytest.xml
-;;
-cov)
-  pytest "$@" --flake8 --isort --black --cov=backend_test --junitxml=/dev/shm/test-results/pytest.xml
-;;
-isort)
-  isort .
-;;
-black)
-  black .
-;;
-pipi)
-
-  if [ $# -gt 0 ]; then
-    pip install --no-warn-script-location --disable-pip-version-check --no-cache-dir --src=/opt/cornershop/src --user --upgrade "$@"
-  else
-    pip install --no-warn-script-location --disable-pip-version-check --no-cache-dir --src=/opt/cornershop/src --user --upgrade -r /opt/cornershop/backend-test/requirements.txt
-    if [[ -f /opt/cornershop/backend-test/requirements-local.txt ]]; then
-      pip install --no-warn-script-location --disable-pip-version-check --no-cache-dir --src=/opt/cornershop/src --user --upgrade -r /opt/cornershop/backend-test/requirements-local.txt
-    fi
-  fi
+  PYTHONPATH=src pytest "$@"
 ;;
 migrate)
-  python manage.py migrate "$@"
+  python src/manage.py migrate "$@"
 ;;
 makemigrations|makemigration|makemig)
-  python manage.py makemigrations "$@"
+  python src/manage.py makemigrations "$@"
 ;;
 sqlmig|sqlmigrate|sqlmigration)
-  python manage.py sqlmigrate "$@"
+  python src/manage.py sqlmigrate "$@"
 ;;
 *)
   _usage
